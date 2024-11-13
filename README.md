@@ -20,7 +20,6 @@ project-root/
       │   └── routes.ts
       ├── processor/    (Background processor code)
       │   ├── worker.ts
-      │   └── processor.ts
       └── shared/       (Shared code)
           └── FileManager.ts
 ```
