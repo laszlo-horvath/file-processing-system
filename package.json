@@ -1,0 +1,21 @@
+{
+  "name": "02-file-reports-and-background-process",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/express": "5.0.0",
+    "@types/multer": "1.4.12",
+    "@types/node": "22.9.0",
+    "express": "4.21.1",
+    "multer": "1.4.5-lts.1",
+    "tsx": "4.19.2",
+    "typescript": "5.6.3"
+  }
+}
