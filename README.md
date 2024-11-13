@@ -31,13 +31,16 @@ Handles external interactions through HTTP endpoints.
 ### Required Endpoints
 
 1. **Upload File**
-```
+```bash
 POST /api/upload
 Content-Type: multipart/form-data
 Body:
   - file: (text file)
+```
 
-Response: {
+Response:
+```JavaScript
+{
   "message": "File uploaded successfully",
   "filename": "example.txt",
   "size": 1234
@@ -45,20 +48,29 @@ Response: {
 ```
 
 2. **Get System Status**
-```
+```bash
 GET /api/status
-Response: {
-  "inbox": number,       // Files in inbox
-  "processing": number,  // Files being processed
-  "completed": number,   // Files completed
-  "failed": number      // Files failed
+```
+
+Response:
+
+```JavaScript
+{
+  "inbox": number,        // Files in inbox
+  "processing": number,   // Files being processed
+  "completed": number,    // Files completed
+  "failed": number        // Files failed
 }
 ```
 
 3. **Get Processing Reports**
-```
+```bash
 GET /api/reports
-Response: {
+```
+
+Response:
+```TypeScript
+{
   "reports": ProcessingReport[]
 }
 ```
