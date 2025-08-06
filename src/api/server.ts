@@ -1,9 +1,11 @@
 import express from 'express';
-import multer from 'multer';
-import { FileManager } from '../shared/file-manager';
+import routes from './routes';
 
 const app = express();
-const fileManager = new FileManager('./data');
 
-// TODO: Implement API endpoints...
-console.log('Server API is running...');
+app.use(routes);
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
