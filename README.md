@@ -194,7 +194,12 @@ npm run start:processor
 
 ## Example File Upload Usage
 
-You can test file upload using curl:
+You can test file upload using curl with the included test file:
+```bash
+curl -F "file=@test.txt" http://localhost:3000/api/upload
+```
+
+Or with any other text file:
 ```bash
 curl -F "file=@example.txt" http://localhost:3000/api/upload
 ```
