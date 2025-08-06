@@ -136,49 +136,20 @@ interface ProcessingReport {
 
 ## Getting Started
 
-1. Initialize project:
+1. Install dependencies:
 ```bash
-mkdir file-processor
-cd file-processor
-npm init -y
+npm install
 ```
 
-2. Install dependencies:
-```bash
-npm install express multer typescript ts-node @types/node @types/express @types/multer
-```
-
-3. Running the System:
-
-Start API Server:
+2. Start API Server:
 ```bash
 npm run start:api
 ```
 
-Start Background Processor:
+3. Start Background Processor:
 ```bash
 npm run start:processor
 ```
-
-## Evaluation Criteria
-
-1. **Architecture (30%)**
-   - Clean separation of components
-   - Proper file management
-   - Error handling
-   - Logging
-
-2. **API Implementation (35%)**
-   - Proper file upload handling
-   - Status reporting
-   - Error handling
-   - Input validation
-
-3. **Background Processor (35%)**
-   - Reliable file processing
-   - Proper queuing (one file at a time)
-   - Error recovery
-   - Report generation
 
 ## Tips
 - Start with the FileManager class
@@ -197,17 +168,4 @@ npm run start:processor
 You can test file upload using curl with the included test file:
 ```bash
 curl -F "file=@test.txt" http://localhost:3000/api/upload
-```
-
-Or with any other text file:
-```bash
-curl -F "file=@example.txt" http://localhost:3000/api/upload
-```
-
-Or using a simple HTML form:
-```html
-<form action="/api/upload" method="post" enctype="multipart/form-data">
-  <input type="file" name="file" accept=".txt">
-  <input type="submit" value="Upload">
-</form>
 ```
